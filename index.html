@@ -14,6 +14,31 @@
         <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <style>
+             footer {
+                   display: block;
+                   background-color: black;
+                   position: fixed;
+                   bottom: 0;
+                   left: 0;
+                   right: 0;
+                   height: 50px;
+                   width: 100%;
+                   border-top: 1px solid white;
+                   display: flex;
+                   justify-content: center;
+                 }
+
+                 .phone {
+                   color: darkgrey;
+                   font-size: 14px;
+                 }
+
+                 .address {
+                   color: darkgrey;
+                   font-size: 14px;
+                 }
+        </style>
     </head>
     <body id="page-top">
         <!-- Navigation-->
@@ -434,7 +459,11 @@
             <script src="js/scripts.js"></script>
     </body>
     <footer>
-        <p> (C) 2023 por Hugo Fabián Alaníz</p>
+        <div class="phone"> 
+            Phone: (###) ###-####<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(###) ###-####
+        </div>
+        <div class="address">
+            Address: 1234 Road Name Hwy<br> City, State 12345
+        </div>
     </footer>
-    <hr class="m-0" />
 </html>
