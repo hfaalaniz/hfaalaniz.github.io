@@ -102,7 +102,7 @@ body {
   /*background-color: var(--bs-body-bg);*/
 
   background: #f8b95b;
-  background: linear-gradient(to right, #faf9f9, #f7e8dc);
+  background: linear-gradient(to right, #92fc68, #ecf1ec);
 
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 1);
