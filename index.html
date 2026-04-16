@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fabián Alaniz — Desarrollador & Electrónico</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+<!-- QRCode.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+
+<nav>
+  <span class="nav-logo">+549-351-284-8802</span>
+  <ul class="nav-links">
+    <li><a href="#about">Sobre mí</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Proyectos</a></li>
+    <li><a href="#contact">Contacto</a></li>
+    <li>
+      <button class="theme-toggle" id="themeToggle" aria-label="Cambiar tema">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/>
+          <line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/>
+          <line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+        <span id="themeLabel">Claro</span>
+      </button>
+    </li>
+  </ul>
+</nav>
+
+<!-- ── HERO ── -->
+<section id="hero">
+  <!-- Globo marca de agua -->
+  <canvas id="globe-canvas"></canvas>
+  <div class="hero-eyebrow">Villa Santa Cruz del Lago, Córdoba · Argentina</div>
+
+  <!-- Contenedor flex: nombre a la izquierda, QR a la derecha -->
+  <div style="display:flex; align-items:flex-start; justify-content:space-between; flex-wrap:wrap; gap:2rem;">
+
+    <!-- Nombre -->
+    <h1 style="margin:0;">
+      Fabián<br>
+      <span class="line2">Alaniz</span>
+    </h1>
+
+    <!-- QR Card Hero con sombra luminosa -->
+    <div id="qr-card" onclick="window.open('https://wa.me/5493512848802?text=Hola+Fabián,+te+contacto+desde+tu+portfolio','_blank')" title="Contactar por WhatsApp">
+      <div id="qr-container"></div>
+      <div style="text-align:center; line-height:1.4;">
+        <div style="font-size:13px; font-weight:700; letter-spacing:0.04em;">Fabián Alaniz</div>
+        <div style="font-size:11px; opacity:0.6; margin-top:2px;">Desarrollador &amp; Electrónico</div>
+        <div class="qr-scan-hint">📱 Escanear → WhatsApp</div>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="hero-desc">
+    Desarrollador de software full-stack y electrónico. Construyo desde firmware en ESP32 y PIC hasta sistemas ERP completos con facturación, POS y tienda online.
+  </p>
+  <div class="hero-tags">
+    <span class="tag accent">C#</span>
+    <span class="tag accent">Python</span>
+    <span class="tag accent2">ESP32 / SCADA</span>
+    <span class="tag accent2">PostgreSQL</span>
+    <span class="tag accent3">ASP.NET Core</span>
+    <span class="tag accent3">TIA Portal</span>
+    <span class="tag">JavaScript</span>
+    <span class="tag">Flipper Zero</span>
+  </div>
+  <div class="cta-row">
+    <a href="#projects" class="btn btn-primary">Ver proyectos</a>
+    <a href="https://github.com/hfaalaniz" target="_blank" class="btn btn-outline">GitHub →</a>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── ABOUT ── -->
+<section id="about">
+  <p class="section-title">01 — sobre mí</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <h2 class="big">Software<br>& electrónica</h2>
+      <p>
+        Me muevo cómodo entre el hardware y el software. Diseño circuitos, programo microcontroladores y construyo sistemas completos de gestión empresarial.
+      </p>
+      <p>
+        Mi proyecto principal es <strong style="color:var(--text)">StockFlow</strong>, un ERP modular con backend, frontend, sistema POS, tienda online y sitio institucional propio. También desarrollo herramientas de automatización industrial con PLCs Siemens y ESP32.
+      </p>
+      <p>
+        Además construyo utilidades de escritorio en C# como conversores de iconos, servidores web portables y calculadoras técnicas.
+      </p>
+    </div>
+    <div class="about-stats">
+      <div class="stat-card">
+        <div class="stat-num">30<span>+</span></div>
+        <div class="stat-label">repositorios</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">5<span>+</span></div>
+        <div class="stat-label">años de experiencia</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">4<span>+</span></div>
+        <div class="stat-label">lenguajes dominados</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">HW<span>+SW</span></div>
+        <div class="stat-label">full stack</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── SKILLS ── -->
+<section id="skills">
+  <p class="section-title">02 — tecnologías</p>
+  <div class="skills-grid">
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#3b82f6"></span>C#</div>
+      <div class="skill-cat">Lenguaje principal</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#3b82f6"></span>Python</div>
+      <div class="skill-cat">Scripting / backend</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#3b82f6"></span>JavaScript</div>
+      <div class="skill-cat">Frontend / web</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#3b82f6"></span>C / C++</div>
+      <div class="skill-cat">Firmware / embebidos</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#10b981"></span>ASP.NET Core</div>
+      <div class="skill-cat">Backend web</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#10b981"></span>SQL / PostgreSQL</div>
+      <div class="skill-cat">Base de datos</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#10b981"></span>Windows Forms .NET</div>
+      <div class="skill-cat">Escritorio C#</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#10b981"></span>REST APIs</div>
+      <div class="skill-cat">Integración / backend</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#8b5cf6"></span>ESP32</div>
+      <div class="skill-cat">Microcontrolador</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#8b5cf6"></span>MICROCHIP</div>
+      <div class="skill-cat">Microcontrolador</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#8b5cf6"></span>SCADA / WSL</div>
+      <div class="skill-cat">Automatización y Control</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#8b5cf6"></span>TIA Portal</div>
+      <div class="skill-cat">PLC Siemens</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#8b5cf6"></span>Flipper Zero / nRF24</div>
+      <div class="skill-cat">RF / hardware hacking</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#8b5cf6"></span>HOME</div>
+      <div class="skill-cat">Domótica</div>
+    </div>
+    <div class="skill-item">
+      <div class="skill-name"><span class="skill-dot" style="background:#8b5cf6"></span>IOT</div>
+      <div class="skill-cat">Internet de las cosas</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── PROJECTS ── -->
+<section id="projects">
+  <p class="section-title">03 — proyectos</p>
+
+  <div class="projects-filter">
+    <button class="filter-btn active" data-filter="all">Todos</button>
+    <button class="filter-btn" data-filter="erp">ERP / Gestión</button>
+    <button class="filter-btn" data-filter="hardware">Hardware</button>
+    <button class="filter-btn" data-filter="desktop">Escritorio</button>
+    <button class="filter-btn" data-filter="web">Web</button>
+  </div>
+
+  <div class="projects-grid" id="projects-grid">
+
+    <div class="project-card featured" data-cat="erp">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/StockFlowBackend" target="_blank" class="project-title">StockFlow Backend</a>
+          <span class="badge badge-blue">ERP</span>
+        </div>
+        <div class="project-icon" style="background:rgba(59,130,246,0.1)">⚙</div>
+      </div>
+      <p class="project-desc">Servidor principal del sistema ERP StockFlow. Gestión de stock, ventas, sucursales y facturación por email.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/StockFlowBackend" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="erp">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/StockFlowFrontend" target="_blank" class="project-title">StockFlow Frontend</a>
+          <span class="badge badge-blue">ERP</span>
+        </div>
+        <div class="project-icon" style="background:rgba(59,130,246,0.1)">🖥</div>
+      </div>
+      <p class="project-desc">Interfaz web del sistema ERP StockFlow.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+        <a href="https://github.com/hfaalaniz/StockFlowFrontend" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="erp">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/StockFlow_Pos-Client" target="_blank" class="project-title">StockFlow POS Client</a>
+          <span class="badge badge-blue">ERP</span>
+        </div>
+        <div class="project-icon" style="background:rgba(59,130,246,0.1)">🛒</div>
+      </div>
+      <p class="project-desc">Sistema punto de venta cliente del backend StockFlow.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/StockFlow_Pos-Client" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="erp web">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/StockFlowTienda" target="_blank" class="project-title">StockFlow Tienda</a>
+          <span class="badge badge-green">público</span>
+        </div>
+        <div class="project-icon" style="background:rgba(16,185,129,0.1)">🏪</div>
+      </div>
+      <p class="project-desc">Tienda online integrada al ecosistema StockFlow.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+        <a href="https://github.com/hfaalaniz/StockFlowTienda" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="erp">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/AdminISP" target="_blank" class="project-title">AdminISP</a>
+          <span class="badge badge-purple">gestión</span>
+        </div>
+        <div class="project-icon" style="background:rgba(139,92,246,0.1)">📡</div>
+      </div>
+      <p class="project-desc">Control administrativo de clientes, socios y usuarios para proveedores de internet (ISP).</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/AdminISP" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card featured" data-cat="hardware">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/WSL_ESP32" target="_blank" class="project-title">WSL ESP32</a>
+          <span class="badge badge-amber">SCADA</span>
+        </div>
+        <div class="project-icon" style="background:rgba(245,158,11,0.1)">⚡</div>
+      </div>
+      <p class="project-desc">Editor y codificador de firmware en lenguaje WSL para funciones SCADA en tarjetas ESP-32.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#555555"></span>C/C++</span>
+        <a href="https://github.com/hfaalaniz/WSL_ESP32" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="hardware desktop">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/SuiteElectricaElectronica" target="_blank" class="project-title">Suite Eléctrica</a>
+          <span class="badge badge-amber">electrónica</span>
+        </div>
+        <div class="project-icon" style="background:rgba(245,158,11,0.1)">🔧</div>
+      </div>
+      <p class="project-desc">Cálculos de inversores, transformadores, reactores, fuentes PWM Buck y editor de esquemas eléctricos.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/SuiteElectricaElectronica" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="hardware">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/ControlCintasPLC" target="_blank" class="project-title">Control Cintas PLC</a>
+          <span class="badge badge-amber">TIA Portal</span>
+        </div>
+        <div class="project-icon" style="background:rgba(245,158,11,0.1)">⚙</div>
+      </div>
+      <p class="project-desc">Interfaz en C# para controlar 3 cintas transportadoras integrada con TIA Portal (Siemens).</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/ControlCintasPLC" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="hardware">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/FZ_nRF24_jammer" target="_blank" class="project-title">FZ nRF24 Jammer</a>
+          <span class="badge badge-purple">RF</span>
+        </div>
+        <div class="project-icon" style="background:rgba(139,92,246,0.1)">📶</div>
+      </div>
+      <p class="project-desc">Jammer educativo con Flipper Zero + nRF24 para BT, BLE, Wi-Fi, Zigbee y drones.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#555555"></span>C/C++</span>
+        <a href="https://github.com/hfaalaniz/FZ_nRF24_jammer" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="desktop">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/HFA-POS" target="_blank" class="project-title">HFA-POS</a>
+          <span class="badge badge-blue">escritorio</span>
+        </div>
+        <div class="project-icon" style="background:rgba(59,130,246,0.1)">💳</div>
+      </div>
+      <p class="project-desc">Sistema POS moderno y modular desarrollado en C# con Windows Forms.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/HFA-POS" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="desktop">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/HFA-ICO" target="_blank" class="project-title">HFA-ICO</a>
+          <span class="badge badge-green">utilidad</span>
+        </div>
+        <div class="project-icon" style="background:rgba(16,185,129,0.1)">🖼</div>
+      </div>
+      <p class="project-desc">Conversor de imágenes a iconos, por lotes y con editor de los iconos creados.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/HFA-ICO" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="desktop web">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/servidorweb" target="_blank" class="project-title">Servidor Web</a>
+          <span class="badge badge-green">utilidad</span>
+        </div>
+        <div class="project-icon" style="background:rgba(16,185,129,0.1)">🌐</div>
+      </div>
+      <p class="project-desc">Servidor web estático portable en C# / ASP.NET Core. Un solo ejecutable para servir HTML, CSS y JS.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#178600"></span>C#</span>
+        <a href="https://github.com/hfaalaniz/servidorweb" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="web desktop">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/HFASpeedTest" target="_blank" class="project-title">HFA SpeedTest</a>
+          <span class="badge badge-green">utilidad</span>
+        </div>
+        <div class="project-icon" style="background:rgba(16,185,129,0.1)">⚡</div>
+      </div>
+      <p class="project-desc">Medidor realista de velocidad de conexión a internet.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+        <a href="https://github.com/hfaalaniz/HFASpeedTest" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="web">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/PlanDeTrabajo" target="_blank" class="project-title">Plan de Trabajo</a>
+          <span class="badge badge-purple">herramienta</span>
+        </div>
+        <div class="project-icon" style="background:rgba(139,92,246,0.1)">📅</div>
+      </div>
+      <p class="project-desc">Generación de planes de trabajo con timeline visual.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+        <a href="https://github.com/hfaalaniz/PlanDeTrabajo" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+    <div class="project-card" data-cat="web">
+      <div class="project-header">
+        <div>
+          <a href="https://github.com/hfaalaniz/Demo-Boxes" target="_blank" class="project-title">Demo Boxes</a>
+          <span class="badge badge-purple">componente</span>
+        </div>
+        <div class="project-icon" style="background:rgba(139,92,246,0.1)">📦</div>
+      </div>
+      <p class="project-desc">Componentes reutilizables para mensajes e inputs modales en aplicaciones web.</p>
+      <div class="project-footer">
+        <span class="project-lang"><span class="lang-dot" style="background:#f1e05a"></span>JavaScript</span>
+        <a href="https://github.com/hfaalaniz/Demo-Boxes" target="_blank" class="project-link">ver repo →</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<hr class="divider">
+
+<!-- ── CONTACT ── -->
+<section id="contact">
+  <p class="section-title">04 — contacto</p>
+  <div class="contact-grid">
+    <div class="contact-text">
+      <h2 class="big">Trabajemos<br>juntos</h2>
+      <p>
+        Estoy disponible para proyectos de desarrollo de software, automatización industrial y sistemas embebidos. Ya sea un sistema de gestión, firmware para microcontroladores o una aplicación web completa.
+      </p>
+      <a href="https://github.com/hfaalaniz" target="_blank" class="btn btn-primary">Ver GitHub</a>
+    </div>
+    <div class="contact-links">
+      <a href="tel:+5493512848802" class="contact-link">
+        <div class="contact-link-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 5.61 5.61l.96-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <span class="contact-link-text">Móvil</span>
+          <span class="contact-link-sub">+549-351-284-8802</span>
+        </div>
+      </a>
+      <a href="mailto:hfaalaniz@gmail.com" class="contact-link">
+        <div class="contact-link-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <span class="contact-link-text">E-mail</span>
+          <span class="contact-link-sub">hfaalaniz@gmail.com</span>
+        </div>
+      </a>
+      <a href="https://github.com/hfaalaniz" target="_blank" class="contact-link">
+        <div class="contact-link-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+        </div>
+        <div>
+          <span class="contact-link-text">GitHub</span>
+          <span class="contact-link-sub">github.com/hfaalaniz</span>
+        </div>
+      </a>
+      <a href="https://electronety.netlify.app" class="contact-link">
+        <div class="contact-link-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <div>
+          <span class="contact-link-text">ElectroNet</span>
+          <span class="contact-link-sub">electronety.netlify.app</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Fabián Alaniz — Villa Santa Cruz del Lago, Córdoba, Argentina</p>
+  <p>Movil +549-351-284-8802</p>
+</footer>
+
+<style>
+/* ── GLOBE WATERMARK ── */
+#globe-canvas {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: min(700px, 95vw);
+  height: min(700px, 95vw);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.18;
+}
+#hero > *:not(#globe-canvas) { position: relative; z-index: 1; }
+/* ── QR HERO CARD ── */
+#qr-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 1.25rem;
+  border: 1px solid rgba(37,211,102,0.35);
+  border-radius: 14px;
+  background: rgba(11,14,20,0.75);
+  backdrop-filter: blur(8px);
+  flex-shrink: 0;
+  cursor: pointer;
+  text-decoration: none;
+  transition: box-shadow 0.3s, border-color 0.3s, transform 0.3s;
+  box-shadow:
+    0 0 18px rgba(37,211,102,0.25),
+    0 0 50px rgba(37,211,102,0.10),
+    inset 0 0 20px rgba(37,211,102,0.04);
+  animation: qr-pulse 3s ease-in-out infinite;
+}
+
+#qr-card:hover {
+  transform: translateY(-4px) scale(1.02);
+  border-color: rgba(37,211,102,0.65);
+  box-shadow:
+    0 0 28px rgba(37,211,102,0.45),
+    0 0 80px rgba(37,211,102,0.20),
+    inset 0 0 30px rgba(37,211,102,0.07);
+}
+
+.qr-scan-hint {
+  font-size: 10px;
+  margin-top: 4px;
+  color: #25d366;
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+}
+
+[data-theme="light"] #qr-card {
+  background: rgba(255,255,255,0.88);
+  border-color: rgba(37,211,102,0.4);
+}
+
+@keyframes qr-pulse {
+  0%, 100% { box-shadow: 0 0 18px rgba(37,211,102,0.25), 0 0 50px rgba(37,211,102,0.10), inset 0 0 20px rgba(37,211,102,0.04); }
+  50%       { box-shadow: 0 0 26px rgba(37,211,102,0.40), 0 0 70px rgba(37,211,102,0.18), inset 0 0 28px rgba(37,211,102,0.07); }
+}
+
+/* ── WHATSAPP FLOATING BUTTON ── */
+#wa-fab {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+#wa-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25d366;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow:
+    0 0 20px rgba(37,211,102,0.55),
+    0 0 55px rgba(37,211,102,0.25),
+    0 4px 16px rgba(0,0,0,0.35);
+  animation: wa-glow 2.5s ease-in-out infinite;
+  transition: transform 0.25s, box-shadow 0.25s;
+  flex-shrink: 0;
+}
+
+#wa-btn:hover {
+  transform: scale(1.10);
+  box-shadow:
+    0 0 32px rgba(37,211,102,0.75),
+    0 0 80px rgba(37,211,102,0.35),
+    0 6px 24px rgba(0,0,0,0.40);
+}
+
+#wa-btn svg { display: block; }
+
+@keyframes wa-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(37,211,102,0.55), 0 0 55px rgba(37,211,102,0.25), 0 4px 16px rgba(0,0,0,0.35); }
+  50%       { box-shadow: 0 0 32px rgba(37,211,102,0.75), 0 0 90px rgba(37,211,102,0.35), 0 4px 16px rgba(0,0,0,0.35); }
+}
+
+/* ── QR POPUP FLOTANTE ── */
+#wa-qr-popup {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 16px 12px;
+  border-radius: 14px;
+  background: rgba(11,14,20,0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(37,211,102,0.4);
+  box-shadow:
+    0 0 24px rgba(37,211,102,0.40),
+    0 0 70px rgba(37,211,102,0.15),
+    0 8px 32px rgba(0,0,0,0.50);
+  animation: popup-in 0.25s cubic-bezier(0.34,1.56,0.64,1) both;
+  cursor: pointer;
+}
+
+#wa-qr-popup.open { display: flex; }
+
+[data-theme="light"] #wa-qr-popup {
+  background: rgba(255,255,255,0.95);
+  border-color: rgba(37,211,102,0.45);
+}
+
+@keyframes popup-in {
+  from { opacity: 0; transform: scale(0.7) translateY(12px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+#wa-qr-popup .popup-name {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+#wa-qr-popup .popup-sub {
+  font-size: 10px;
+  color: #25d366;
+  font-family: var(--mono);
+  letter-spacing: 0.04em;
+}
+</style>
+
+<!-- ── WHATSAPP FAB ── -->
+<div id="wa-fab">
+  <!-- Popup QR flotante -->
+  <div id="wa-qr-popup" title="Abrir WhatsApp"
+       onclick="window.open('https://wa.me/5493512848802?text=Hola+Fabián,+te+contacto+desde+tu+portfolio','_blank')">
+    <div id="wa-qr-img"></div>
+    <div class="popup-name">Fabián Alaniz</div>
+    <div class="popup-sub">📱 Escanear → WhatsApp</div>
+  </div>
+  <!-- Botón circular -->
+  <button id="wa-btn" title="WhatsApp" aria-label="Contactar por WhatsApp"
+          onclick="toggleWaPopup()">
+    <svg width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#fff" d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.47 1.64 6.35L3 29l6.84-1.6A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3zm0 23.6a10.58 10.58 0 0 1-5.4-1.48l-.38-.23-3.97.93.97-3.85-.25-.4A10.6 10.6 0 1 1 16 26.6zm5.82-7.94c-.32-.16-1.88-.93-2.17-1.03-.29-.1-.5-.16-.71.16-.21.32-.82 1.03-1.01 1.24-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.57-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.5.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.1-.21.05-.4-.03-.55-.08-.16-.71-1.71-.97-2.34-.26-.62-.52-.53-.71-.54l-.61-.01c-.21 0-.55.08-.84.4-.29.32-1.1 1.07-1.1 2.62s1.13 3.04 1.29 3.25c.16.21 2.22 3.4 5.38 4.76.75.33 1.34.52 1.8.67.75.24 1.44.21 1.98.13.6-.09 1.88-.77 2.15-1.51.26-.74.26-1.37.18-1.51-.08-.13-.29-.21-.61-.37z"/>
+    </svg>
+  </button>
+</div>
+
+<script>
+  // ── QR CODE ──
+  const QR_WA_URL = "https://wa.me/5493512848802?text=Hola+Fab%C3%A1n,+te+contacto+desde+tu+portfolio";
+
+  function getQRSrc(isDark, size) {
+    var fg  = isDark ? "ffffff" : "0d1117";
+    var bg  = isDark ? "0d1117" : "ffffff";
+    return "https://api.qrserver.com/v1/create-qr-code/?size=" + size + "x" + size
+         + "&data=" + encodeURIComponent(QR_WA_URL)
+         + "&color=" + fg + "&bgcolor=" + bg + "&margin=6&qzone=1";
+  }
+
+  function renderQR(theme) {
+    var isDark = theme === "dark";
+
+    // ── Hero QR ──
+    var heroContainer = document.getElementById("qr-container");
+    if (heroContainer) {
+      var heroImg = heroContainer.querySelector("img");
+      if (!heroImg) {
+        heroImg = document.createElement("img");
+        heroImg.width = 150; heroImg.height = 150;
+        heroImg.style.borderRadius = "6px";
+        heroImg.style.display = "block";
+        heroImg.alt = "QR WhatsApp";
+        heroContainer.innerHTML = "";
+        heroContainer.appendChild(heroImg);
+      }
+      heroImg.src = getQRSrc(isDark, 150);
+    }
+
+    // ── Popup QR flotante ──
+    var popupContainer = document.getElementById("wa-qr-img");
+    if (popupContainer) {
+      var popImg = popupContainer.querySelector("img");
+      if (!popImg) {
+        popImg = document.createElement("img");
+        popImg.width = 140; popImg.height = 140;
+        popImg.style.borderRadius = "6px";
+        popImg.style.display = "block";
+        popImg.alt = "QR WhatsApp";
+        popupContainer.innerHTML = "";
+        popupContainer.appendChild(popImg);
+      }
+      popImg.src = getQRSrc(isDark, 140);
+    }
+  }
+
+  // ── THEME ──
+  function applyTheme(t) {
+    document.documentElement.setAttribute("data-theme", t);
+    var label = document.getElementById("themeLabel");
+    if (label) label.textContent = t === "dark" ? "Claro" : "Oscuro";
+    renderQR(t);
+  }
+
+  // ── FILTER ──
+  document.querySelectorAll(".filter-btn").forEach(function(btn) {
+    btn.addEventListener("click", function() {
+      document.querySelectorAll(".filter-btn").forEach(function(b) { b.classList.remove("active"); });
+      btn.classList.add("active");
+      var filter = btn.dataset.filter;
+      document.querySelectorAll(".project-card").forEach(function(card) {
+        var cats = card.dataset.cat || "";
+        card.style.display = (filter === "all" || cats.includes(filter)) ? "flex" : "none";
+      });
+    });
+  });
+
+  // ── WHATSAPP POPUP ──
+  var waPopupOpen = false;
+  function toggleWaPopup() {
+    var popup = document.getElementById("wa-qr-popup");
+    waPopupOpen = !waPopupOpen;
+    if (waPopupOpen) {
+      popup.classList.add("open");
+    } else {
+      popup.classList.remove("open");
+    }
+  }
+
+  // Cerrar popup al click fuera
+  document.addEventListener("click", function(e) {
+    if (waPopupOpen && !document.getElementById("wa-fab").contains(e.target)) {
+      document.getElementById("wa-qr-popup").classList.remove("open");
+      waPopupOpen = false;
+    }
+  });
+
+  // ── INIT ──
+  var saved = localStorage.getItem("theme") || "dark";
+  applyTheme(saved);
+
+  document.getElementById("themeToggle").addEventListener("click", function() {
+    var next = document.documentElement.getAttribute("data-theme") === "dark" ? "light" : "dark";
+    applyTheme(next);
+    localStorage.setItem("theme", next);
+  });
+</script>
+</body>
+</html>
+<script>
+// ── GLOBE WATERMARK ──
+(function() {
+  const canvas = document.getElementById('globe-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+
+  const DPR = window.devicePixelRatio || 1;
+  const SIZE = 700;
+  canvas.width  = SIZE * DPR;
+  canvas.height = SIZE * DPR;
+  ctx.scale(DPR, DPR);
+
+  const cx = SIZE / 2, cy = SIZE / 2, R = SIZE * 0.44;
+
+  // ── Generate globe points on sphere surface ──
+  const LAT_LINES = 13;   // horizontal circles
+  const LON_LINES = 18;   // vertical circles
+  const EXTRA_PTS = 40;   // random extra connection nodes
+
+  // Build lat/lon intersection points
+  const nodes = [];
+  for (let i = 1; i < LAT_LINES; i++) {
+    const lat = Math.PI * i / LAT_LINES - Math.PI / 2;
+    for (let j = 0; j < LON_LINES; j++) {
+      const lon = 2 * Math.PI * j / LON_LINES;
+      nodes.push({ lat, lon, type: 'grid' });
+    }
+  }
+  // Poles
+  nodes.push({ lat:  Math.PI/2, lon: 0, type: 'pole' });
+  nodes.push({ lat: -Math.PI/2, lon: 0, type: 'pole' });
+  // Extra random nodes
+  for (let i = 0; i < EXTRA_PTS; i++) {
+    nodes.push({
+      lat: (Math.random() - 0.5) * Math.PI,
+      lon: Math.random() * 2 * Math.PI,
+      type: 'extra'
+    });
+  }
+
+  // ── Build edges: lat lines, lon lines, + some random cross-connections ──
+  const edges = [];
+  // Latitude rings
+  for (let i = 1; i < LAT_LINES; i++) {
+    for (let j = 0; j < LON_LINES; j++) {
+      const a = (i-1) * LON_LINES + j;
+      const b = (i-1) * LON_LINES + (j + 1) % LON_LINES;
+      edges.push([a, b]);
+    }
+  }
+  // Longitude arcs
+  for (let j = 0; j < LON_LINES; j++) {
+    for (let i = 0; i < LAT_LINES - 2; i++) {
+      const a = i * LON_LINES + j;
+      const b = (i + 1) * LON_LINES + j;
+      edges.push([a, b]);
+    }
+    // Connect to poles
+    edges.push([j, nodes.length - EXTRA_PTS - 2]);         // north pole
+    edges.push([(LAT_LINES-2)*LON_LINES + j, nodes.length - EXTRA_PTS - 1]); // south pole
+  }
+  // Random extra connections between extra nodes and nearby grid nodes
+  for (let i = nodes.length - EXTRA_PTS; i < nodes.length; i++) {
+    const n1 = nodes[i];
+    // Connect to 2 closest grid nodes
+    const grid = nodes.slice(0, (LAT_LINES-1)*LON_LINES + 2);
+    const sorted = grid.map((n2, idx) => {
+      const dlat = n1.lat - n2.lat, dlon = n1.lon - n2.lon;
+      return { idx, d: dlat*dlat + dlon*dlon };
+    }).sort((a,b) => a.d - b.d);
+    edges.push([i, sorted[0].idx]);
+    edges.push([i, sorted[1].idx]);
+  }
+
+  // ── Project 3D point to 2D with rotation ──
+  function project(lat, lon, rotY) {
+    const x3 = Math.cos(lat) * Math.sin(lon + rotY);
+    const y3 = Math.sin(lat);
+    const z3 = Math.cos(lat) * Math.cos(lon + rotY);
+    return { x: cx + R * x3, y: cy - R * y3, z: z3 };
+  }
+
+  // ── Dot size based on a pulsing "crescendo" wave ──
+  // Nodes pulse red with growing intensity based on longitude phase
+  let t = 0;
+
+  // ── Detect theme to adjust colors ──
+  function isLight() {
+    return document.documentElement.getAttribute('data-theme') === 'light';
+  }
+
+  function drawFrame() {
+    ctx.clearRect(0, 0, SIZE, SIZE);
+    t += 0.008;
+    const rotY = t * 0.4;
+    const light = isLight();
+
+    // Project all nodes
+    const pts = nodes.map(n => project(n.lat, n.lon, rotY));
+
+    // ── Clip everything to the globe circle ──
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(cx, cy, R, 0, Math.PI * 2);
+    ctx.clip();
+
+    // Draw edges — BOTH endpoints must be on the front hemisphere (z > 0)
+    // Using a single strokeStyle batch per alpha bucket would still cause ghost lines,
+    // so we draw each edge completely isolated with its own path.
+    ctx.lineWidth = 0.9;
+    edges.forEach(([a, b]) => {
+      const pa = pts[a], pb = pts[b];
+      // Hard requirement: both endpoints visible — eliminates ALL crossing/ghost lines
+      if (pa.z <= 0 || pb.z <= 0) return;
+      const alpha = Math.max(0, Math.min(1, (pa.z + pb.z) / 2));
+      const lineColor = light
+        ? `rgba(30,90,220,${alpha * 0.75})`
+        : `rgba(99,160,255,${alpha * 0.85})`;
+      ctx.beginPath();
+      ctx.moveTo(pa.x, pa.y);
+      ctx.lineTo(pb.x, pb.y);
+      ctx.strokeStyle = lineColor;
+      ctx.stroke();
+    });
+
+    // Draw nodes
+    nodes.forEach((n, i) => {
+      const p = pts[i];
+      if (p.z <= 0) return;
+
+      const vis = p.z; // 0..1 (z is already 0..1 on front hemisphere)
+
+      // Crescendo pulse wave
+      const phase = ((n.lon + rotY * 2.5) % (2 * Math.PI) + 2 * Math.PI) % (2 * Math.PI);
+      const wave  = Math.pow(Math.max(0, Math.sin(phase - Math.PI / 2 + t)), 2);
+      const pulse = 0.3 + wave * 0.7;
+
+      const baseR = n.type === 'extra' ? 2.8 : (n.type === 'pole' ? 3.5 : 2.0);
+      const r = baseR * (0.6 + pulse * 0.8) * vis;
+
+      // Color: blue at rest → red at peak (adjusted per theme)
+      let red, green, blue;
+      if (light) {
+        red   = Math.round(30  + (225) * wave);
+        green = Math.round(90  * (1 - wave * 0.85));
+        blue  = Math.round(220 * (1 - wave * 0.9));
+      } else {
+        red   = Math.round(99  + (156) * wave);
+        green = Math.round(160 * (1 - wave * 0.9));
+        blue  = Math.round(255 * (1 - wave * 0.85));
+      }
+      const alpha = vis * (0.80 + pulse * 0.20);
+
+      // Outer glow ring
+      if (wave > 0.4) {
+        const glowR = r * 2.4;
+        const grad = ctx.createRadialGradient(p.x, p.y, r * 0.5, p.x, p.y, glowR);
+        grad.addColorStop(0, `rgba(${red},${green},${blue},${alpha * 0.7})`);
+        grad.addColorStop(1, `rgba(${red},${green},${blue},0)`);
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, glowR, 0, Math.PI * 2);
+        ctx.fillStyle = grad;
+        ctx.fill();
+      }
+
+      // Solid dot
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, Math.max(0.5, r), 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${red},${green},${blue},${alpha})`;
+      ctx.fill();
+    });
+
+    ctx.restore();
+
+    requestAnimationFrame(drawFrame);
+  }
+
+  drawFrame();
+})();
+</script>
